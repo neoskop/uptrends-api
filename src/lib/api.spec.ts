@@ -14,7 +14,7 @@ describe('UptrendsAPI', () => {
     let requestSpy : SinonSpy;
     
     beforeEach(() => {
-        api = new UptrendsAPI({ username: 'foo', password: 'bar' });
+        api = new UptrendsAPI(new Request({ username: 'foo', password: 'bar' }));
         requestSpy = spy((api as any).request, 'request');
         reqSpy = (api as any).request.req = spy(function req() {});
     });
