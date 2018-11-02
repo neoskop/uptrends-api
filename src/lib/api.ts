@@ -1,4 +1,4 @@
-import { IRequest, IRequestConfig, Request } from './request';
+import { IRequest } from './request';
 import { Probe } from './types/probe';
 import { ProbeGroup, ProbeGroupMember } from './types/probe-group';
 import { CheckpointServer } from './types/checkpoint-server';
@@ -8,17 +8,12 @@ import { Statistics } from './types/statistics';
 import { formatDate, url } from './utils';
 import { Alert } from './types/alert';
 import debug from 'debug';
+
 const D = debug('uptrends:api');
 
 export class UptrendsAPI {
-    readonly request : IRequest;
     
-    constructor(configOrRequest : IRequestConfig|IRequest) {
-        if(configOrRequest.hasOwnProperty('username') && configOrRequest.hasOwnProperty('password')) {
-            this.request = new Request(configOrRequest as IRequestConfig);
-        } else {
-            this.request = configOrRequest as IRequest;
-        }
+    constructor(public readonly request : IRequest) {
     }
     
     getProbes() : Promise<Probe[]> {
