@@ -1,0 +1,7 @@
+{
+  "name": "@neoskop/uptrends-api/request",
+  "main": "../dist/uptrends-api-request.bundle.js",
+  "module": "../lib/request.js",
+  "jsnext:main": "../lib/request.js",
+  "typings": "../lib/request.d.ts"
+}

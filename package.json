@@ -15,7 +15,7 @@
     "prebuild": "npm run test:coverage",
     "build": "npm run clean && npm run build:tsc && npm run build:rollup",
     "build:tsc": "tsc -p tsconfig.esm.json",
-    "build:rollup": "rollup -c rollup.js",
+    "build:rollup": "rollup -c rollup.js && rollup -c rollup-request.js",
     "publish-please": "publish-please",
     "prepublishOnly": "publish-please guard"
   },
