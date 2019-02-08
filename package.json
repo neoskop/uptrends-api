@@ -1,6 +1,6 @@
 {
   "name": "@neoskop/uptrends-api",
-  "version": "2.0.1-rc.0",
+  "version": "2.0.1-rc.1",
   "description": "A NodeJS implementation of the uptrands API",
   "main": "dist/uptrends-api.bundle.js",
   "module": "index.js",
